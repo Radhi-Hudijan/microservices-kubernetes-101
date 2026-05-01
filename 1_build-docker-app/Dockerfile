@@ -1,4 +1,5 @@
-FROM python:3.10-slim
+# Use ECR public image for Python 3.10
+FROM public.ecr.aws/docker/library/python:3.10-slim     
 
 WORKDIR /src
 
