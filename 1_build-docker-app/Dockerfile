@@ -1,4 +1,6 @@
-FROM  python:3.13-slim
+#use ECR public image for python 3.13 to avoid too many requests to Docker Hub
+ARG REGISTRY="public.ecr.aws"
+FROM  ${REGISTRY}/docker/library/python:3.13-slim
 
 WORKDIR /src
 
